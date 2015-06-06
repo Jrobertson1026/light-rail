@@ -4,16 +4,9 @@ var Schema = mongoose.Schema;
 var q = require('q');
 
 var UserSchema = new Schema({
-  first_name: { type: String },
-  last_name: { type: String},
-  phone_number: { type: Number },
+  name: { type: String },
   email: { type: String, unique: true, lowercase: true, required: true },
   password: { type: String, required: true },
-  user_type: { type: String },
-  city: { type: String },
-  state: { type: String },
-  zip_code: { type: Number },
-  country: { type: String },
   createdAt: { type: Date, default: Date.now }
 });
 

@@ -22,13 +22,9 @@ module.exports = {
     if(!req.isAuthenticated()) {
       return res.status(204).json('');
     } else {
-      if (req.user.user_type === 'general_user') {
-        //isGeneralUser:true/isSubscriber:true returns type that will be used in controllers to limit access to views
-        return res.status(200).json({isGeneralUser: true});
-      } else if (req.user.user_type === 'subscriber') {
-        return res.status(200).json({isSubscriber: true});
-      }
-    }
-  },
+      return res.status(200).json(req.user);
+  }
+ }
+
 
 };

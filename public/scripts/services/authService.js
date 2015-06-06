@@ -11,8 +11,7 @@ app.service('AuthService', function($http, $q, $location) {
       url: '/api/register/user',
       data: {
         email: user.email,
-        password: user.password,
-        user_type: user.user_type
+        password: user.password
       }
     }).then(function(res) {
       $http({
@@ -60,9 +59,7 @@ app.service('AuthService', function($http, $q, $location) {
       method: 'GET',
       url: '/api/user/isLoggedIn'
     }).then(function(res) {
-      console.log('requireAuth1:', res)
       if(res.status === 200) {
-        console.log('requireAuth2:', res.data);
         return deferred.resolve(res.data)
       } else { 
         $location.path('/login');
