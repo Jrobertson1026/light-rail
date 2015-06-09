@@ -14,7 +14,7 @@ var GeneralUserSchema = new Schema({
   }
 });
 
-//Pre('save') runs before every user is created
+/*//Pre('save') runs before every user is created
 GeneralUserSchema.pre('save', function(next) {
   var user = this;
   if (!user.isModified('password')) {
@@ -44,6 +44,6 @@ GeneralUserSchema.methods.verifyPassword = function(password) {
     deferred.resolve(true);
   });
   return deferred.promise;
-};
+};*/
 
 module.exports = mongoose.model('GeneralUser', GeneralUserSchema);

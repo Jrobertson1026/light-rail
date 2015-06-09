@@ -8,10 +8,12 @@ module.exports = {
       newUser.save(function (err, result) {
         console.log('err: ', err);
         if (err) {
-          if (err.code === 500)
+          if (err.code === 500) {
             return res.status(500).json(err);
-          if (err.code === 11000)
+          }
+          if (err.code === 11000) {
             return res.status(11000).json(err);
+          }
         }
         console.log('results create User: ', result);
         res.send(result);
