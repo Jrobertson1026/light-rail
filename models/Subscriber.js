@@ -2,6 +2,7 @@ var mongoose = require('mongoose');
 var bcrypt = require('bcrypt');
 var Schema = mongoose.Schema;
 var q = require('q');
+var stripeCustomer = require('./plugins/stripeCustomer.js');
 
 var SubscriberSchema = new Schema({
   company_name: {type: String, required: true },
@@ -19,6 +20,7 @@ var SubscriberSchema = new Schema({
   createdAt: { type: Date, default: Date.now }
 });
 
+subscriberSchema.plugin(stripeCustomer)
 
 //Pre('save') runs before every user is created
 SubscriberSchema.pre('save', function(next) {

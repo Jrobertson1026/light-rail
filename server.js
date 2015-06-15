@@ -5,6 +5,7 @@ var bodyParser = require('body-parser');
 var passport = require('passport');
 var session = require('express-session');
 var LocalStrategy = require('passport-local').Strategy;
+var env = require('dotenv').load();
 
 //*** CONTROLLERS ***//
 var UserCtrl = require('./controllers/UserCtrl.js');
@@ -26,6 +27,7 @@ app.use(session({
   saveUninitialized: true,
   resave: true
 }));
+
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.json());
 app.use(passport.initialize());
@@ -153,6 +155,72 @@ app.get('/api/subscriber/isLoggedIn', SubscriberCtrl.isLoggedIn);
 app.post('/api/register/admin', AdminCtrl.createAdmin);
 app.post('/api/login/admin', passport.authenticate('admin-local', { failureRedirect: '/login/admin'}), AdminCtrl.loginAdmin);
 app.get('/api/admin/isLoggedIn', AdminCtrl.isLoggedIn);
+
+
+
+//** Stripe ** //
+
+var stripe= require('stripe')(PLATFORM_SECRET_KEY);
+  stripe.accounts.create({
+    country: "US",
+    managed: true
+  });
+
+var stripeToken = request.body.stripeToken;
+
+var charge = stripe.charges.create({
+  amount: 800000, // amount in cents
+  currency: "usd",
+  source: stripeToken,
+  description: "Example Charge"
+}, function(err, charge) {
+  if (err && err.type === "StripeCardError") {
+    alert("card has been declined")
+  }
+});
+
+var customerId = getStripeCustomerId(user)
+
+
+//allows you to save the subscribers cards
+stripe.customers.create({
+  source: stripeToken,
+  description: "payinguser@example.com",
+}).then(function(customer) {
+  return stripe.charges.create({
+    amount: 800000, // amount in cents
+    currency: "usd",
+    customer: customer.id
+  });
+}).then(function(charge) {
+  saveStripeCustomerId(user, charge.customer);
+});
+
+
+// creates a new subscription
+stripe.plans.create({
+  amount: 800000,
+  interval: "year",
+  name: "Yearly Apartment Subscription",
+  currency: 'usd',
+  id: 'yrlyAptSub'
+}, function(err, plan) {
+  // async call
+});
+
+
+//subscribes a customer to a plan
+
+stripe.customers.create({
+  source: stripeToken,
+  plan: 'yrlAptSub',
+  email: 'payinguser@example.com'
+}, function(err, customer) {
+     // async call here
+});
+
+
+
 
 
 
