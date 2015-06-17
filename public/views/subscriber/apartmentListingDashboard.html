@@ -1,1 +1,34 @@
-<h1> Your Aparment Listing Dashboard!</h1>
+<form action="" method="POST" id="payment-form">
+  <span class="payment-errors"></span>
+  <div class="form-row">
+    <label>
+      <span>Card Number</span>
+      <input type="text" size="20" data-stripe="number" ng-model="card.number" />
+    </label>
+  </div>
+  <div class="form-row">
+    <label>
+      <span>CVC</span>
+      <input type="text" size="4" data-stripe="cvc" ng-model="card.cvc" />
+    </label>
+  </div>
+  <div class="form-row">
+    <label>
+      <span>Expiration (MM/YYYY)</span>
+      <input type="text" size="2" data-stripe="exp-month" ng-model="card.expirationMonth" />
+    </label>
+    <span> / </span>
+    <input type="text" size="4" data-stripe="exp-year" ng-model="card.expirationYear" />
+  </div>
+  <div class="form-row" ng-repeat="plan in plans">
+    <label for="plan" class="col-sm-3 control-label">Plan</label>
+    <div class="col-sm-4">
+      <div class="radio">
+        <label>
+          <input type="radio" data-toggle="radio">
+          <span>{{plan.name}} " " {{plan.price}}</span>
+        </label>
+      </div>
+    </div>
+    <button type="submit" ng-click='acceptPayment()'>Submit Payment</button>
+</form>

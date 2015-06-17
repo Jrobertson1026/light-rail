@@ -2,23 +2,63 @@ var mongoose = require('mongoose');
 var bcrypt = require('bcrypt-nodejs');
 var Schema = mongoose.Schema;
 var q = require('q');
+var stripeCustomer = require('./plugins/stripeCustomer.js');
 
 var SubscriberSchema = new Schema({
-  company_name: {type: String, required: true },
-  first_name: { type: String, required: true },
-  last_name: { type: String, required: true},
-  phone_number: { type: String, required: true },
-  email: { type: String, unique: true, lowercase: true, required: true },
-  password: { type: String, required: true },
-  contact_address: {
-     street_address: { type: String},
-     city: { type: String },
-     state: { type: String },
-     zip_code: { type: Number }
+  company_name: {
+    type: String,
+    required: true
   },
-  createdAt: { type: Date, default: Date.now }
+  first_name: {
+    type: String,
+    required: true
+  },
+  last_name: {
+    type: String,
+    required: true
+  },
+  phone_number: {
+    type: String,
+    required: true
+  },
+  email: {
+    type: String,
+    unique: true,
+    lowercase: true,
+    required: true
+  },
+  password: {
+    type: String,
+    required: true
+  },
+  subscription: {
+    type: String
+  },
+  contact_address: {
+    street_address: {
+      type: String
+    },
+    city: {
+      type: String
+    },
+    state: {
+      type: String
+    },
+    zip_code: {
+      type: Number
+    }
+  },
+  stripe_info: {
+    type: String
+
+  },
+  createdAt: {
+    type: Date,
+    default: Date.now
+  }
 });
 
+// SubscriberSchema.plugin(stripeCustomer)
 
 //Pre('save') runs before every user is created
 SubscriberSchema.pre('save', function(next) {

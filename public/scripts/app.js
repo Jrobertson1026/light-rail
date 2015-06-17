@@ -1,6 +1,6 @@
 var app = angular.module('lightRail', ['ngRoute', 'toaster', 'angularMoment']);
 
-app.config(function($routeProvider){
+app.config(function($routeProvider) {
   $routeProvider
     .when('/', {
       templateUrl: 'views/mainTmpl.html',
@@ -43,7 +43,7 @@ app.config(function($routeProvider){
       controller: 'GeneralUserFavoritesCtrl'
     })
     .when('/adminSubPage/:apartmentId', {
-      templateUrl:'views/adminSubPage.html',
+      templateUrl: 'views/adminSubPage.html',
       controller: 'adminSubPageCtrl'
     })
     .when('/adminUser/:apartmentId', {
@@ -54,12 +54,16 @@ app.config(function($routeProvider){
       templateUrl: 'views/generalUser/generalUserProfileTmpl.html',
       controller: 'ProfileCtrl',
       resolve: {
-        userData: function(GeneralUserService){
-          GeneralUserService.getSubscriberInfo().then(function(response){
+        userData: function(GeneralUserService) {
+          GeneralUserService.getSubscriberInfo().then(function(response) {
             console.log(response);
           });
         }
       }
+    })
+    .when('/subscriberListingDashboard', {
+      templateUrl: 'views/subscriber/apartmentListingDashboard.html',
+      controller: 'apartmentListingDashboardCtrl'
     })
     .when('/adminSubPage', {
       templateUrl: 'views/adminSubPage.html',
@@ -69,14 +73,11 @@ app.config(function($routeProvider){
       templateUrl: 'views/adminGenUser.html',
       controller: 'adminUserCtrl'
     })
-    .when('/adminStats',{
+    .when('/adminStats', {
       templateUrl: 'views/adminStats.html',
       controller: 'adminStatsCtrl'
     })
-     .otherwise({
+    .otherwise({
       redirectTo: '/'
     });
 });
-
-
-
