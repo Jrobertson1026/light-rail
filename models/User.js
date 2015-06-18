@@ -1,8 +1,7 @@
 var mongoose = require('mongoose');
-var bcrypt = require('bcrypt');
+var bcrypt = require('bcrypt-nodejs');
 var Schema = mongoose.Schema;
 var q = require('q');
-var listing = require('./listing');
 
 var GeneralUserSchema = new Schema({
   name: {type: String},
@@ -10,17 +9,37 @@ var GeneralUserSchema = new Schema({
   password: { type: String, required: true },
   createdAt: { type: Date, default: Date.now },
   favorites: {
-    myFavorites: [listing]
+    apartments: [{
+      type: Schema.Types.ObjectId,
+      ref: 'Apartment'
+    }]
+  // hotels: [{
+  //   type: Schema.Types.ObjectId,
+  //   ref: 'GeneralUser'
+  // }],
+  // realEstate: [{
+  //   type: Schema.Types.ObjectId,
+  //   ref: 'GeneralUser'
+  // }],
+  // entertainment: [{
+  //   type: Schema.Types.ObjectId,
+  //   ref: 'GeneralUser'
+  // }]
   }
-});
 
+});
 
 //Pre('save') runs before every user is created
 GeneralUserSchema.pre('save', function(next) {
   var user = this;
-  //passw encryption
+  if (!user.isModified('password')) {
+    return next();
+  }
   bcrypt.genSalt(10, function(err, salt) {
-    bcrypt.hash(user.password, salt, function(err, hash) {
+    if (err) {
+      return next(err);
+    }
+    bcrypt.hash(user.password, salt, null, function(err, hash) {
       //console.log(hash)
       user.password = hash;
       next();
@@ -38,6 +57,6 @@ GeneralUserSchema.methods.verifyPassword = function(password) {
     deferred.resolve(true);
   });
   return deferred.promise;
-}
+};
 
 module.exports = mongoose.model('GeneralUser', GeneralUserSchema);

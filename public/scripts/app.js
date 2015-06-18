@@ -1,62 +1,103 @@
 var app = angular.module('lightRail', ['ngRoute', 'toaster', 'angularMoment']);
 
-app.config(function($routeProvider){
+app.config(function($routeProvider) {
   $routeProvider
     .when('/', {
-      templateUrl: 'views/main.html',
+      templateUrl: 'views/mainTmpl.html',
       controller: 'MainPageCtrl'
     })
     .when('/apartments/:apartmentId', {
-      templateUrl: 'views/main.html',
+      templateUrl: 'views/mainTmpl.html',
       controller: 'MainPageCtrl'
     })
     .when('/map', {
       templateUrl: 'views/map.html',
       controller: 'MapCtrl'
     })
+    //General User Routes
     .when('/register/general_user', {
       templateUrl: 'views/register/registerGeneralUserTmpl.html',
-      controller: 'RegisterCtrl'
-    })
-    .when('/register/subscriber', {
-      templateUrl: 'views/register/registerSubscriberTmpl.html',
-      controller: 'RegisterCtrl'
-    })
-    .when('/register/admin', {
-      templateUrl: 'views/register/registerAdminTmpl.html',
       controller: 'RegisterCtrl'
     })
     .when('/login', {
       templateUrl: 'views/login/loginUserTmpl.html',
       controller: 'LoginCtrl'
     })
+    .when('/myfavorites', {
+      templateUrl: 'views/generalUser/generalUserFavoritesTmpl.html',
+      controller: 'GeneralUserFavoritesCtrl'
+    })
+    //Subscriber Routes
+    .when('/register/subscriber', {
+      templateUrl: 'views/register/registerSubscriberTmpl.html',
+      controller: 'RegisterCtrl'
+    })
     .when('/login/subscriber', {
       templateUrl: 'views/login/loginSubscriberTmpl.html',
       controller: 'LoginCtrl'
+    })
+    .when('/subscriber/new_listing', {
+      templateUrl: 'views/subscriber/newApartmentListingTmpl.html',
+      controller: 'SubscriberCtrl'
+    })
+    .when('/subscriber/dashboard/:id', {
+      templateUrl: 'views/subscriber/apartmentListingDashboard.html',
+      controller: 'SubscriberDashboardCtrl',
+      resolve: {
+        subData: function(GeneralUserService) {
+          return GeneralUserService.getSubscriberInfo();
+        }
+      }
+    })
+    //Admin Routes
+    .when('/register/admin', {
+      templateUrl: 'views/register/registerAdminTmpl.html',
+      controller: 'RegisterCtrl'
     })
     .when('/login/admin', {
       templateUrl: 'views/login/loginAdminTmpl.html',
       controller: 'LoginCtrl'
     })
     .when('/myfavorites', {
-      templateUrl: 'views/generalUserFavoritesTmpl.html',
+      templateUrl: 'views/generalUser/generalUserFavoritesTmpl.html',
       controller: 'GeneralUserFavoritesCtrl'
     })
-    .when('/profile', {
-      templateUrl: 'views/profile.html',
+    .when('/adminSubPage/:apartmentId', {
+      templateUrl: 'views/adminSubPage.html',
+      controller: 'adminSubPageCtrl'
+    })
+    .when('/adminUser/:apartmentId', {
+      templateUrl: 'views/admin/adminGenUser.html',
+      controller: 'adminUserCtrl'
+    })
+    .when('/general_user/profile', {
+      templateUrl: 'views/generalUser/generalUserProfileTmpl.html',
       controller: 'ProfileCtrl',
       resolve: {
-        userData: function(GeneralUserService){
-          GeneralUserService.getSubscriberInfo().then(function(response){
+        userData: function(GeneralUserService) {
+          GeneralUserService.getSubscriberInfo().then(function(response) {
             console.log(response);
           });
         }
       }
     })
-     .otherwise({
+    .when('/subscriberListingDashboard', {
+      templateUrl: 'views/subscriber/apartmentListingDashboard.html',
+      controller: 'apartmentListingDashboardCtrl'
+    })
+    .when('/adminSubPage', {
+      templateUrl: 'views/admin/adminSubPage.html',
+      controller: 'adminSubPageCtrl'
+    })
+    .when('/adminUser', {
+      templateUrl: 'views/admin/adminGenUser.html',
+      controller: 'adminUserCtrl'
+    })
+    .when('/adminStats', {
+      templateUrl: 'views/admin/adminStats.html',
+      controller: 'adminStatsCtrl'
+    })
+    .otherwise({
       redirectTo: '/'
     });
 });
-
-
-
