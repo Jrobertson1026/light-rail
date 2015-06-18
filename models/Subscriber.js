@@ -3,6 +3,7 @@ var bcrypt = require('bcrypt-nodejs');
 var Schema = mongoose.Schema;
 var q = require('q');
 var stripeCustomer = require('./plugins/stripeCustomer.js');
+var SubscriberListing = require('./SubscriberListings');
 
 var SubscriberSchema = new Schema({
   company_name: {
@@ -55,7 +56,8 @@ var SubscriberSchema = new Schema({
   createdAt: {
     type: Date,
     default: Date.now
-  }
+  },
+  listings: [SubscriberListing]
 });
 
 // SubscriberSchema.plugin(stripeCustomer)

@@ -30,11 +30,10 @@ res.send(result);
     return res.json({
       loggedIn: true
     });
+    return res.json(req.user);
   },
 
   isLoggedIn: function(req, res) {
-    console.log("LoggedIn", req)
-    console.log('loggedIn req.user', req.user)
     if (req.isAuthenticated()) {
       return res.status(200).json(req.user);
     } else {

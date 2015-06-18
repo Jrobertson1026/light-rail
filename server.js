@@ -12,11 +12,14 @@ var flash = require('express-flash')
 var UserCtrl = require('./controllers/UserCtrl.js');
 var SubscriberCtrl = require('./controllers/SubscriberCtrl.js');
 var AdminCtrl = require('./controllers/AdminCtrl.js');
+var TrainStationCtrl = require('./controllers/TrainStationCtrl.js');
+var stripeCtrl = require('./controllers/stripeCtrl.js');
 
 //*** MODELS ***//
 var User = require('./models/User.js');
 var Subscriber = require('./models/Subscriber.js');
 var Admin = require('./models/Admin.js');
+var TrainStation = require('./models/TrainStation.js');
 
 /*Stripe Variables*/
 var PLATFORM_SECRET_KEY = process.env.PLATFORM_SECRET_KEY;
@@ -28,42 +31,6 @@ stripe.accounts.create({
 
 });
 
-
-//var stripeToken = req.body.stripeToken;
-
-var charge = stripe.charges.create({
-  amount: 800,
-  currency: "usd",
-  //source: stripeToken,
-  description: "Example Charge"
-}, function(err, charge) {
-  if (err && err.type === "StripeCardError") {
-    alert("card has been declined")
-  }
-});
-
-// var customerId = getStripeCustomerId(user);
-
-var stripeOptions = {
-  apiKey: PLATFORM_SECRET_KEY || '',
-  stripePubKey: PLATFORM_PUBLISHABLE_KEY || '',
-  defaultPlan: 'free',
-  plans: ['free', '1_listings_Yr', '1_listing_Month'],
-  planData: {
-    'free': {
-      name: 'Free',
-      price: 0
-    },
-    '1_listings_Yr': {
-      name: '1_listings_Yr',
-      price: 800
-    },
-    '1_listing_Month': {
-      name: '1_listing_Month',
-      price: 80
-    },
-  }
-}
 
 
 //*** EXPRESS ***//
@@ -196,65 +163,33 @@ app.post('/api/login/user', passport.authenticate('user-local', {
   failureRedirect: '/login/user'
 }), UserCtrl.loginUser);
 app.get('/api/user/isLoggedIn', UserCtrl.isLoggedIn);
+app.get('/api/user/getFavorites', UserCtrl.getFavorites);
 
 //** Subscriber ** //
-
 app.post('/api/register/subscriber', SubscriberCtrl.createSubscriber);
 app.post('/api/login/subscriber', passport.authenticate('subscriber-local', {
   failureRedirect: '/login/subscriber'
 }), SubscriberCtrl.loginSubscriber);
 app.get('/api/subscriber/isLoggedIn', SubscriberCtrl.isLoggedIn);
+//** Stripe **//
+
+app.post('/api/subscriber/createStripe', stripeCtrl.createCustomer)
 
 
 //** Admin ** //
-
 app.post('/api/register/admin', AdminCtrl.createAdmin);
 app.post('/api/login/admin', passport.authenticate('admin-local', {
   failureRedirect: '/login/admin'
 }), AdminCtrl.loginAdmin);
 app.get('/api/admin/isLoggedIn', AdminCtrl.isLoggedIn);
 
+//** Train Stations **//
+app.post('/api/trainStation', TrainStationCtrl.createLocation);
 
 
 //** Stripe ** //
 
-/*
-//allows you to save the subscribers cards set this up under user endpoint
-stripe.customers.create({
-  source: stripeToken,
-  description: "payinguser@example.com",
-}).then(function(customer) {
-  return stripe.charges.create({
-    amount: 800000, // amount in cents
-    currency: "usd",
-    customer: customer.id
-  });
-}).then(function(charge) {
-  saveStripeCustomerId(user, charge.customer);
-});
 
-
-// creates a new subscription set this up under user endpoint
-stripe.plans.create({
-  amount: 800000,
-  interval: "year",
-  name: "Yearly Apartment Subscription",
-  currency: 'usd',
-  id: 'yrlyAptSub'
-}, function(err, plan) {
-  // async call
-});
-
-
-//subscribes a customer to a plan set this up under user endpoint
-
-stripe.customers.create({
-  source: stripeToken,
-  plan: 'yrlAptSub',
-  email: 'payinguser@example.com'
-}, function(err, customer) {
-     // async call here
-});*/
 
 
 
