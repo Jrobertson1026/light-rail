@@ -39,7 +39,7 @@ var GeneralUserSchema = new Schema({
       //   ref: 'GeneralUser'
       // }]
   },
-  facebookId: {
+  facebook_id: {
     type: String
   },
   provider: {

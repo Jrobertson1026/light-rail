@@ -15,9 +15,9 @@ var port = 9001;
 var UserCtrl = require('./controllers/UserCtrl.js');
 var SubscriberCtrl = require('./controllers/SubscriberCtrl.js');
 var AdminCtrl = require('./controllers/AdminCtrl.js');
-var TrainStationCtrl = require('./controllers/TrainStationCtrl.js'); << << << < HEAD
-var stripeCtrl = require('./controllers/StripeCtrl.js') === === =
-  var ApartmentCtrl = require('./controllers/ApartmentCtrl.js') >>> >>> > eb21a33426bea8701678279950fee0368dec15ff
+var TrainStationCtrl = require('./controllers/TrainStationCtrl.js');
+var stripeCtrl = require('./controllers/StripeCtrl.js');
+var ApartmentCtrl = require('./controllers/ApartmentCtrl.js');
 
 //*** MODELS ***//
 var User = require('./models/User.js');
@@ -120,27 +120,20 @@ passport.use(new FacebookStrategy({
   clientSecret: FACEBOOK_SECRET,
   callbackURL: 'http://localhost:9001/auth/facebook/callback'
 }, function(accessToken, refreshToken, profile, done) {
-  User.findOrCreate({
-    facebookId: profile.id
-  }, function(err, user) {
+  var update = profile._json;
+  var options = {
+    new: true,
+    upsert: true
+  };
+
+  User.findOneAndUpdate({
+    facebook_id: profile.id
+  }, update, options, function(err, user) {
     if (err) {
       return done(err);
     }
-    user = newUser({
-      email: profile.email,
-      provider: "facebook"
-    });
-    user.save(function(err, user) {
-        console.log(profile);
-        if (err) {
-          console.log(err)
-        };
-        console.log("callingdone", user);
-        done(null, user);
-      })
-      //process.nextTick(function() {
-    return done(null, profile);
-  })
+    return done(null, user);
+  });
 }));
 
 
