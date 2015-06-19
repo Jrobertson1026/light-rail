@@ -57,6 +57,14 @@ var SubscriberSchema = new Schema({
     type: Date,
     default: Date.now
   },
+  createdAt: {
+    type: Date,
+    default: Date.now
+  },
+  subscribed: {
+    type: Boolean,
+    default: false
+  },
   listings: [SubscriberListing]
 });
 
