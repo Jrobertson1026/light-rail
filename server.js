@@ -171,9 +171,14 @@ app.post('/api/login/subscriber', passport.authenticate('subscriber-local', {
   failureRedirect: '/login/subscriber'
 }), SubscriberCtrl.loginSubscriber);
 app.get('/api/subscriber/isLoggedIn', SubscriberCtrl.isLoggedIn);
+<<<<<<< HEAD
 //** Stripe **//
 
 app.post('/api/subscriber/createStripe', stripeCtrl.createCustomer)
+=======
+app.get('/api/subscriber/listings', SubscriberCtrl.getListings);
+app.post('/api/subscriber/addListing', SubscriberCtrl.addListing);
+>>>>>>> 990b85c110bfc2bb0c475fce2a4bdf22c4ae3cf1
 
 
 //** Admin ** //
