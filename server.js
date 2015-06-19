@@ -125,7 +125,6 @@ passport.use(new FacebookStrategy({
     new: true,
     upsert: true
   };
-
   User.findOneAndUpdate({
     facebook_id: profile.id
   }, update, options, function(err, user) {
