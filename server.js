@@ -120,27 +120,19 @@ passport.use(new FacebookStrategy({
   clientSecret: FACEBOOK_SECRET,
   callbackURL: 'http://localhost:9001/auth/facebook/callback'
 }, function(accessToken, refreshToken, profile, done) {
-  User.findOrCreate({
-    facebookId: profile.id
-  }, function(err, user) {
+  var update = profile._json;
+  var options = {
+    new: true,
+    upsert: true
+  };
+  User.findOneAndUpdate({
+    facebook_id: profile.id
+  }, update, options, function(err, user) {
     if (err) {
       return done(err);
     }
-    user = newUser({
-      email: profile.email,
-      provider: "facebook"
-    });
-    user.save(function(err, user) {
-        console.log(profile);
-        if (err) {
-          console.log(err)
-        };
-        console.log("callingdone", user);
-        done(null, user);
-      })
-      //process.nextTick(function() {
-    return done(null, profile);
-  })
+    return done(null, user);
+  });
 }));
 
 
@@ -197,9 +189,7 @@ app.post('/api/login/subscriber', passport.authenticate('subscriber-local', {
 }), SubscriberCtrl.loginSubscriber);
 app.get('/api/subscriber/isLoggedIn', SubscriberCtrl.isLoggedIn);
 app.get('/api/subscriber/listings', SubscriberCtrl.getListings);
-app.post('/api/subscriber/addApartmentListing', SubscriberCtrl.addListing);
-app.put('/api/subscriber/edit_profile', SubscriberCtrl.editProfile);
-app.put('/api/subscriber/edit_listing', SubscriberCtrl.editListing);
+app.post('/api/subscriber/addListing', SubscriberCtrl.addListing);
 
 
 //** Admin ** //
@@ -238,6 +228,7 @@ app.get('/logout', function(req, res) {
 //** Apartments **//
 app.get('/api/apartment/getAptData', ApartmentCtrl.getAptData);
 app.get('/api/apartment/getNearestStops', ApartmentCtrl.getNearestStops);
+
 
 app.get('/api/users/userId', isAuthed, function(req, res) {
   User.findOne({
