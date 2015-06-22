@@ -9,7 +9,7 @@
       },
       "phone_number": "602-761-7884",
       "webpage": "http://www.loftsatriosaladoapartments.com/",
-      "cover_picture": "",
+      "cover_picture": "http://medialibrarycdn.propertysolutions.com/media_library/3049/513137d600c12731.jpg",
       "pictures_array": [{
         "name": "",
         "src": "",
@@ -64,136 +64,511 @@
       "long": "-111.9496601",
       "created_at": "",
     }, {
-      "apartment_name": "",
+      "apartment_name": "Hanover Mill Avenue",
       "address": {
-        "street_address": "",
+        "street_address": "601 W 5th St",
         "city": "tempe",
         "state": "AZ",
         "zip_code": "85281"
       },
-      "phone_number": "",
-      "webpage": "",
-      "cover_picture": "",
+      "phone_number": "844-829-7005",
+      "webpage": "N/A",
+      "cover_picture": "http://images2.aptcdn.com/attachment/hanover-mill-avenue-tempe-az/c1v00de/?x=42B99859EAA055761AE0CA8A688711382A736781548AC12E2E697FB8C29DDA942F135B078C4416274D68C3E33BBF551541F4436EA56C7A190750C2686B96F999112571728770068CB544593073BFB25AA0E0CC52B1D5820774004A23D9A29AF4815A00BF43CB4C5D39C417ADBFE0D252106F774BBB821E95D654CAE982E3BFE93AA1E60AC61BB686D7AF4E8650EFD89BB63A5388BADC9F1C415C42D192FE855A2A546E5ABC76113E5D0DBE10152D1AD5FAAAC73F794F9477BE7BE41433D05CA13DAE3327B86A2A91E2A6C2C36EF2F0D57FF216A568D5E30EDCB904080085D9872260AC2FAD4C8343A0EE236378FF70E9874D3BA7C4112ABE85D7F53547956BEA",
       "pictures_array": [{
         "name": "",
         "src": "",
-        "url":
+        "url": "http://images4.aptcdn.com/attachment/hanover-mill-avenue-tempe-az/c1v00de/?x=42B99859EAA055761AE0CA8A6887113890E8258A34E98A2B6D6426A8EBBB81D9FB586B3E2513A1756BB344AB44DF60A819B598DA579E43FBC0BD007DF8817A2526A6988A452846AB46F8F7AA8D2FDD3F01D8FB1EC18B1E7621884F4A96CB71AD60D1EA3DE5D754CB0674AB10CEB04D42B5978C7AD1BE7F806FAD92FF8E080F6538F7CA009FF7B0C1F96512EA22FF7CE7589F0552F45AF9AFA8D2B35C3DE7CEB44001E9CDB6C7528002D35A3244AE06A648AE15570B92C69AEE7711E62A40E127218AD02837F35000BF7D5A78C49278CFA4CF43560B6FDC354A18801554E4B4F3DF710A9E89C1CC4BD33B35401E4187E11DC5E6338E36E86599CED109D53F21FB"
       }],
       "units": [{
-        "bedrooms": "",
-        "bathrooms": "",
-        "monthly_rent": "",
-        "square_feet": ""
+        "bedrooms": "1",
+        "bathrooms": "1",
+        "monthly_rent": "1,200",
+        "square_feet": "500"
+
+      }, {
+        "bedrooms": "1",
+        "bathrooms": "1",
+        "monthly_rent": "1,500",
+        "square_feet": "732"
+
+      }, {
+        "bedrooms": "2",
+        "bathrooms": "2",
+        "monthly_rent": "2,629",
+        "square_feet": "1,329"
 
       }],
       "price_range": {
-        "min": "",
-        "max": ""
+        "min": "1,200",
+        "max": "3,259"
       },
       "amentities": {
-        "pet_friendly": "",
-        "garage": "",
-        "pool": "",
-        "gym": "",
-        "washer_dryer": ""
+        "pet_friendly": "true",
+        "garage": "false",
+        "pool": "true",
+        "gym": "true",
+        "washer_dryer": "true"
       },
 
-      "description": "",
-      "additional_amentities": "",
-      "nearest_stops": [{
-        "TrainStation._id": "",
+      "description": "High end down town apartment",
+      "additional_amentities": "walk in closets, smoke free,",
+      "nearest_stops": [" ", " "],
+      "lat": "33.4255031",
+      "long": "-111.9412688",
+      "created_at": "",
+    }, {
+      "apartment_name": "West Sixth",
+      "address": {
+        "street_address": "115 W 6th St",
+        "city": "tempe",
+        "state": "AZ",
+        "zip_code": "85281"
+      },
+      "phone_number": "855-256-0990",
+      "webpage": "http://www.west6thtempe.com/",
+      "cover_picture": "http://capi.myleasestar.com/v2/dimg-crop/6807160/88x88/6807160.jpg",
+      "pictures_array": [{
+        "name": "",
+        "src": "",
+        "url": "http://capi.myleasestar.com/v2/dimg-crop/6807165/971x497/6807165.jpg"
+      }, {
+        "name": "",
+        "src": "",
+        "url": "http://capi.myleasestar.com/v2/dimg-crop/6807213/971x497/6807213.jpg"
+      }, {
+        "name": "",
+        "src": "",
+        "url": "http://capi.myleasestar.com/v2/dimg-crop/6807187/971x497/6807187.jpg"
       }],
-      "lat": "",
+      "units": [{
+        "bedrooms": "1",
+        "bathrooms": "1",
+        "monthly_rent": "1380",
+        "square_feet": "633"
+
+      }, {
+        "bedrooms": "2",
+        "bathrooms": "2",
+        "monthly_rent": "1800",
+        "square_feet": "874"
+
+      }, {
+        "bedrooms": "2",
+        "bathrooms": "2",
+        "monthly_rent": "1,929",
+        "square_feet": "1,211"
+
+      } {
+        "bedrooms": "3",
+        "bathrooms": "2",
+        "monthly_rent": "2,390",
+        "square_feet": "1,636"
+
+      }, {
+        "bedrooms": "4",
+        "bathrooms": "4.5",
+        "monthly_rent": "8,000",
+        "square_feet": "7,104"
+
+      }],
+      "price_range": {
+        "min": "1,380",
+        "max": "8,000"
+      },
+      "amentities": {
+        "pet_friendly": "true",
+        "garage": "true",
+        "pool": "true",
+        "gym": "true",
+        "washer_dryer": "true"
+      },
+
+      "description": "Higher learning meets elevated living at West 6th, a student-friendly luxury apartment community located just steps from Arizona State University and Sun Devil Stadium. Featuring a sleek and sophisticated contemporary design, elegant interior finishes, and high-end appliances, the skyscraping pair of high rise towers makes West 6th the tallest and grandest residential property in the Tempe, Phoenix, and Scottsdale areas. Unparalleled floor to ceiling views showcase the best of Tempe. Within walking distance, you???ll uncover more than 40 restaurants and bars as well as trendy shopping on Mill Ave. Don???t feel like walking? Catch a train at the Light Rail Station, just a five-minute walk from your door. Enjoy a breezy ride to nearby Temple Beach Park and Lake where you can spend a fun afternoon hanging out on the water with friends. Better yet, enjoy a casual weekend right at home! With an infinity edge saltwater swimming pool and spa, fire pit rooftop terrace and cabanas, tons of co...",
+      "additional_amentities": "out Door Dog park, community-wide Wifi, controlled access, Grocery Service, Laundry Service, Online Service, Pet Care, Shuttle to Train, coffee Bar, Elevator,Tanning Salon, Cobana, gated, bike storage, & a game room",
+      "nearest_stops": ["", ""],
+      "lat": "33.4240956",
       "long": "",
       "created_at": "",
     }, {
-      "apartment_name": "",
+      "apartment_name": "University Village",
       "address": {
-        "street_address": "",
+        "street_address": "920-944 S Terrace Rd",
         "city": "tempe",
         "state": "AZ",
         "zip_code": "85281"
       },
-      "phone_number": "",
-      "webpage": "",
-      "cover_picture": "",
+      "phone_number": "480-967-6665",
+      "webpage": "http://www.universityvillageapts.com/",
+      "cover_picture": "http://medialibrarycdn.propertysolutions.com/websites_media/universityvillageapts.com/cached_thumbs/640x480/4feb22e18d0fb919.jpg",
       "pictures_array": [{
         "name": "",
         "src": "",
-        "url":
+        "url": "http://medialibrarycdn.propertysolutions.com/websites_media/universityvillageapts.com/cached_thumbs/640x480/4feb22e18d0fb919.jpg"
+      }, {
+        "name": "",
+        "src": "",
+        "url": "http://medialibrarycdn.propertysolutions.com/websites_media/universityvillageapts.com/cached_thumbs/640x480/4feb22d55bf72190.jpg"
+      }, {
+        "name": "",
+        "src": "",
+        "url": "http://medialibrarycdn.propertysolutions.com/websites_media/universityvillageapts.com/cached_thumbs/640x480/4feb22c8c1093704.jpg"
       }],
       "units": [{
-        "bedrooms": "",
-        "bathrooms": "",
-        "monthly_rent": "",
-        "square_feet": ""
+        "bedrooms": "1",
+        "bathrooms": "1",
+        "monthly_rent": "700",
+        "square_feet": "650"
+
+      }, {
+        "bedrooms": "2",
+        "bathrooms": "1",
+        "monthly_rent": "830",
+        "square_feet": "750"
+
+      }, {
+        "bedrooms": "3",
+        "bathrooms": "1",
+        "monthly_rent": "950",
+        "square_feet": "850"
 
       }],
       "price_range": {
-        "min": "",
-        "max": ""
+        "min": "700",
+        "max": "950"
       },
       "amentities": {
-        "pet_friendly": "",
-        "garage": "",
-        "pool": "",
-        "gym": "",
-        "washer_dryer": ""
+        "pet_friendly": "false",
+        "garage": "false",
+        "pool": "true",
+        "gym": "false",
+        "washer_dryer": "false"
       },
 
-      "description": "",
-      "additional_amentities": "",
-      "nearest_stops": [{
-        "TrainStation._id": "",
-      }],
-      "lat": "",
-      "long": "",
+      "description": "Beautiful community located across the street from Arizona State University! Just minutes away from shopping, dining, & conveniently located near the Light Rail, our community offers something for everyone!",
+      "additional_amentities": "refridgerator, upgraded Cabnitry, newley Romdoeled Counter Tops, Walk in Closets Available, Eat-in Kitchens, gas Barbeque Grills",
+      "nearest_stops": [" ", " "],
+      "lat": "33.419242",
+      "long": "-111.923988",
       "created_at": "",
     }, {
-      "apartment_name": "",
+      "apartment_name": "ASU Crossroads",
       "address": {
-        "street_address": "",
+        "street_address": "1010-1044 E Orange St",
         "city": "tempe",
         "state": "AZ",
         "zip_code": "85281"
       },
-      "phone_number": "",
-      "webpage": "",
-      "cover_picture": "",
+      "phone_number": "602-570-9594",
+      "webpage": "http://www.asucrossroads.com/",
+      "cover_picture": "http://www.asucrossroads.com/gridmedia/img/slide1.jpg",
       "pictures_array": [{
         "name": "",
         "src": "",
-        "url":
+        "url": "http://www.asucrossroads.com/gridmedia/img/slide2.jpg"
+      }, {
+        "name": "",
+        "src": "",
+        "url": "http://www.asucrossroads.com/gridmedia/img/slide3.jpg"
+      }, {
+        "name": "",
+        "src": "",
+        "url": "http://www.asucrossroads.com/gridmedia/img/slide4.jpg"
       }],
       "units": [{
-        "bedrooms": "",
-        "bathrooms": "",
-        "monthly_rent": "",
-        "square_feet": ""
+        "bedrooms": "1",
+        "bathrooms": "1",
+        "monthly_rent": "760",
+        "square_feet": "500"
+
+      }, {
+        "bedrooms": "2",
+        "bathrooms": "1",
+        "monthly_rent": "925",
+        "square_feet": "846"
 
       }],
       "price_range": {
-        "min": "",
-        "max": ""
+        "min": "760",
+        "max": "846"
       },
       "amentities": {
-        "pet_friendly": "",
-        "garage": "",
-        "pool": "",
-        "gym": "",
-        "washer_dryer": ""
+        "pet_friendly": "false",
+        "garage": "false",
+        "pool": "true",
+        "gym": "false",
+        "washer_dryer": "false"
+      },
+
+      "description": "Our charming community offers spacious floor plans that are designed with your comfort and convenience in mind, offering features you would expect to find in a luxury home. Choose from our selection of distinctive studio, one and two bedroom homes with some featuring your own private patio or balcony area, a gourmet kitchen, ceiling fans, expansive 9ft ceilings, wood style flooring in entries, living and dining areas, linen closets, vertical blinds and air conditioning. We also offer most utilities paid. Find your new home today!",
+      "additional_amentities": "ac, private balconies, linen closets, 9 foot ceilings",
+      "nearest_stops": [" ", " "],
+      "lat": "33.419148",
+      "long": "-111.921472",
+      "created_at": "",
+    }, {
+      "apartment_name": "La Crescenta Park Apartments",
+      "address": {
+        "street_address": "1025 E Orange St",
+        "city": "tempe",
+        "state": "AZ",
+        "zip_code": "85281"
+      },
+      "phone_number": "480-967-8203",
+      "webpage": "http://www.lacresenta.com/",
+      "cover_picture": "http://lacresenta.qwestoffice.net/mediac/450_0/media/ec856d3cc493f7ffff80f3ffffe905.jpg",
+      "pictures_array": [{
+        "name": "",
+        "src": "",
+        "url": "http://lacresenta.qwestoffice.net/mediac/450_0/media/b9c91cce549dce51ffff8e57ffffe905.JPG"
+      }],
+      "units": [{
+        "bedrooms": "studio",
+        "bathrooms": "1",
+        "monthly_rent": "675",
+        "square_feet": "450"
+
+      }, {
+        "bedrooms": "1",
+        "bathrooms": "1",
+        "monthly_rent": "775",
+        "square_feet": "680"
+
+      }, {
+        "bedrooms": "2",
+        "bathrooms": "1",
+        "monthly_rent": "850",
+        "square_feet": "780"
+
+      }],
+      "price_range": {
+        "min": "675",
+        "max": "850"
+      },
+      "amentities": {
+        "pet_friendly": "true",
+        "garage": "false",
+        "pool": "true",
+        "gym": "false",
+        "washer_dryer": "false"
+      },
+
+      "description": "La Cresenta is in the heart of Tempe, within walking distance of ASU & Light Rail.  You are only minutes away from dining, entertainment, shopping and movies.  At home, enjoy the sparkling pools, bbq/picnic areas, and lush park like courtyards.  Other amenities include  newly renovated club house,  study area  with Wi-Fi,  large children’s play ground, and  spacious laundry rooms.",
+      "additional_amentities": "Laundry Service, Laundry Facilities, High Speed Internet Access",
+      "nearest_stops": [" ", " "],
+      "lat": "33.419148",
+      "long": "-111.921472",
+      "created_at": "",
+    }, {
+      "apartment_name": "Tempe Terrace",
+      "address": {
+        "street_address": "1130 E Orange St, Tempe",
+        "city": "tempe",
+        "state": "AZ",
+        "zip_code": "85281"
+      },
+      "phone_number": "602-570-9594",
+      "webpage": "N/A",
+      "cover_picture": "http://i4.ypcdn.com/blob/983bbbcea5a5f721b4391ef420839a7ff5cd7047_500.jpg",
+      "pictures_array": [{
+        "name": "",
+        "src": "",
+        "url": "http://i4.ypcdn.com/blob/983bbbcea5a5f721b4391ef420839a7ff5cd7047_500.jpg"
+      }],
+      "units": [{
+        "bedrooms": "1",
+        "bathrooms": "1",
+        "monthly_rent": "760",
+        "square_feet": "660"
+
+      }, {
+        "bedrooms": "2",
+        "bathrooms": "2",
+        "monthly_rent": "1,095",
+        "square_feet": "928"
+
+      }],
+      "price_range": {
+        "min": "760",
+        "max": "1,100"
+      },
+      "amentities": {
+        "pet_friendly": "false",
+        "garage": "false",
+        "pool": "true",
+        "gym": "true",
+        "washer_dryer": "false"
       },
 
       "description": "",
-      "additional_amentities": "",
-      "nearest_stops": [{
-        "TrainStation._id": "",
+      "additional_amentities": "Laundry Facilities, smoke Free, High Speed Internet Access",
+      "nearest_stops": [" ", " "],
+      "lat": "33.4191031",
+      "long": "-111.9211207",
+      "created_at": "",
+    }, {
+      "apartment_name": "Tempe Horizons",
+      "address": {
+        "street_address": "1117 E 8th St",
+        "city": "tempe",
+        "state": "AZ",
+        "zip_code": "85281"
+      },
+      "phone_number": "844-710-3937",
+      "webpage": "http://www.tempehorizons.com/",
+      "cover_picture": "http://www.tempehorizons.com/images/1_sm.jpg",
+      "pictures_array": [{
+        "name": "",
+        "src": "",
+        "url": "http://www.tempehorizons.com/images/2_sm.jpg"
+      }, {
+        "name": "",
+        "src": "",
+        "url": "http://www.tempehorizons.com/images/4_sm.jpg"
       }],
-      "lat": "",
-      "long": "",
+      "units": [{
+        "bedrooms": "2",
+        "bathrooms": "2",
+        "monthly_rent": "950",
+        "square_feet": "1,028"
+
+      }],
+      "price_range": {
+        "min": "950",
+        "max": "1000"
+      },
+      "amentities": {
+        "pet_friendly": "false/",
+        "garage": "false",
+        "pool": "false",
+        "gym": "false",
+        "washer_dryer": "false"
+      },
+
+      "description": "  Located in Tempe with close proximity to Arizona State University, Tempe Horizons is a three - story, 24 unit complex.Each spacious apartment is approximately 1028 square feet with 2 full bedrooms, 2 full bathrooms, complete kitchen, living, and dining areas. Each unit also includes a washer and dryer, high speed internet access, covered parking and more.",
+      "additional_amentities": "",
+      "nearest_stops": [" ", " "],
+      "lat": "33.4196519",
+      "long": "-111.9207175",
+      "created_at": "",
+    }, {
+      "apartment_name": "12Fifty5",
+      "address": {
+        "street_address": "1255 E University Dr",
+        "city": "tempe",
+        "state": "AZ",
+        "zip_code": "85281"
+      },
+      "phone_number": "480-968-8118",
+      "webpage": "http://www.12fifty5.com/",
+      "cover_picture": "http://12fifty5.com/assets/images/cache/12fity5_sign_small.6287-a75d85181e73922f393befefc4977758.jpg",
+      "pictures_array": [{
+        "name": "",
+        "src": "",
+        "url": "http://12fifty5.com/assets/images/cache/12fifty5_office_small.6305-285d4237eec41083e8ed31b688922886.jpg",
+      }, {
+        "name": "",
+        "src": "",
+        "url": "http://12fifty5.com/assets/images/cache/12fifty5_pool_small.6315-1abeb93c904a1742d6b9467828ff890a.jpg",
+      }, {
+        "name": "",
+        "src": "",
+        "url": "http://12fifty5.com/assets/images/cache/1255_office_interior_3228_sm-6c8b6718eabeb1a9d80dc96a0bbe4988.jpg",
+      }, {
+        "name": "",
+        "src": "",
+        "url": "http://12fifty5.com/assets/images/cache/1255_clubhouse_4598_sm-1aef6123cfe334b06fc5c3d8c8c69114.jpg",
+      }, {
+        "name": "",
+        "src": "",
+        "url": "http://12fifty5.com/assets/images/cache/1255_computer_room_3196_sm-39c63cf26ba1e38f4563012ab661b76b.jpg",
+      }],
+      "units": [{
+        "bedrooms": "studio",
+        "bathrooms": "1",
+        "monthly_rent": "650-700",
+        "square_feet": "493"
+
+      }, {
+        "bedrooms": "1",
+        "bathrooms": "1",
+        "monthly_rent": "700-825",
+        "square_feet": "643"
+
+      }, {
+        "bedrooms": "2",
+        "bathrooms": "2",
+        "monthly_rent": "920-1,120",
+        "square_feet": "848"
+
+      }],
+      "price_range": {
+        "min": "650",
+        "max": "1,120"
+      },
+      "amentities": {
+        "pet_friendly": "true",
+        "garage": "false",
+        "pool": "true",
+        "gym": "true",
+        "washer_dryer": "false"
+      },
+
+      "description": "It truly doesn’t get any better. With hot amenities and fab floor plans, 12Fifty5 has exactly what you want and yes, you guessed it…much MORE! Located in the heart of Tempe, just a short walk from the ASU campus, 12Fifty5 is close to the buzzing downtown nightlife and Tempe Town Lake. We offer contemporary furnishings and modern design in our common areas. Our studio, one, and two bedroom apartments are just right for you. Take a dip in one of our three refreshing pools. Enjoy a vigorous workout in the fitness and conditioning lounge. Curl up with your tablet or rock to some beats in your new pad. Living hot, yet way cool… at 12Fifty5.",
+      "additional_amentities": "Laundry Facilities, Tanning Salon, Cabana, Fenced Lot, Gated, Grill, Picnic Area, GameRoom",
+      "nearest_stops": [" ", " "],
+      "lat": "33.4207167",
+      "long": "-111.9197254",
+      "created_at": "",
+    }, {
+      "apartment_name": "Dorsey Place",
+      "address": {
+        "street_address": "1275 E University Dr",
+        "city": "tempe",
+        "state": "AZ",
+        "zip_code": "85281"
+      },
+      "phone_number": "877-806-5216",
+      "webpage": "http://www.dorseyplace.com/",
+      "cover_picture": "http://medialibrarycdn.propertysolutions.com/media_library/3049/5422f0cae260d177.jpg",
+      "pictures_array": [{
+        "name": "",
+        "src": "",
+        "url": "http://medialibrarycdn.propertysolutions.com/media_library/3049/547f8175938c0146.jpg"
+      }, {
+        "name": "",
+        "src": "",
+        "url": "http://medialibrarycdn.propertysolutions.com/media_library/3049/53a33c539082b249.jpg"
+      }, {
+        "name": "",
+        "src": "",
+        "url": "http://medialibrarycdn.propertysolutions.com/media_library/3049/53a33c9a4f291681.jpg"
+      }],
+      "units": [{
+        "bedrooms": "1",
+        "bathrooms": "1",
+        "monthly_rent": "13775",
+        "square_feet": "1,120"
+
+      }],
+      "price_range": {
+        "min": "1,120",
+        "max": "1,120"
+      },
+      "amentities": {
+        "pet_friendly": "true",
+        "garage": "false",
+        "pool": "true",
+        "gym": "true",
+        "washer_dryer": ""
+      },
+
+      "description": "Discover your new home amidst innovate, open-concept two- and three-bedroom luxury apartment homes with designer finishes. Settle into a home that suites your current lifestyle and enjoy the fact that there's also room to grow.",
+      "additional_amentities": "",
+      "nearest_stops": [" "],
+      "lat": "33.421722",
+      "long": "-111.918313",
       "created_at": "",
     },
-
 
 
 
